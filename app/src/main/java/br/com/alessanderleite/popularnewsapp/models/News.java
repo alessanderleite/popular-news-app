@@ -1,23 +1,20 @@
 package br.com.alessanderleite.popularnewsapp.models;
 
+import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-
-import java.util.List;
 
 public class News {
 
     @SerializedName("status")
     @Expose
     private String status;
-
-    @SerializedName("totalResult")
+    @SerializedName("totalResults")
     @Expose
-    private int totalResult;
-
+    private Integer totalResults;
     @SerializedName("articles")
     @Expose
-    private List<Article> articles;
+    private List<Article> articles = null;
 
     public String getStatus() {
         return status;
@@ -27,12 +24,12 @@ public class News {
         this.status = status;
     }
 
-    public int getTotalResult() {
-        return totalResult;
+    public Integer getTotalResults() {
+        return totalResults;
     }
 
-    public void setTotalResult(int totalResult) {
-        this.totalResult = totalResult;
+    public void setTotalResults(Integer totalResults) {
+        this.totalResults = totalResults;
     }
 
     public List<Article> getArticles() {
@@ -42,4 +39,5 @@ public class News {
     public void setArticles(List<Article> articles) {
         this.articles = articles;
     }
+
 }
