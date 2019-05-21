@@ -40,8 +40,4 @@ dependencies {
 
     //Times Formater
     implementation 'org.ocpsoft.prettytime:prettytime:4.0.1.Final'
-
-
-
-
 }
