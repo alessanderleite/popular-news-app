@@ -25,18 +25,18 @@ public class Utils {
                     new ColorDrawable(Color.parseColor("#d93947"))
             };
 
-    public static ColorDrawable getRandomDrawbleColor() {
+    public static ColorDrawable getRandomDrawableColor() {
         int idx = new Random().nextInt(vibrantLightColorList.length);
         return vibrantLightColorList[idx];
     }
 
-    public static String DateToTimeFormat(String oldstringDate){
+    public static String DateToTimeFormat(String oldStringDate){
         PrettyTime p = new PrettyTime(new Locale(getCountry()));
         String isTime = null;
         try {
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'",
                     Locale.ENGLISH);
-            Date date = sdf.parse(oldstringDate);
+            Date date = sdf.parse(oldStringDate);
             isTime = p.format(date);
         } catch (ParseException e) {
             e.printStackTrace();
@@ -45,15 +45,15 @@ public class Utils {
         return isTime;
     }
 
-    public static String DateFormat(String oldstringDate){
+    public static String DateFormat(String oldStringDate){
         String newDate;
         SimpleDateFormat dateFormat = new SimpleDateFormat("E, d MMM yyyy", new Locale(getCountry()));
         try {
-            Date date = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse(oldstringDate);
+            Date date = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse(oldStringDate);
             newDate = dateFormat.format(date);
         } catch (ParseException e) {
             e.printStackTrace();
-            newDate = oldstringDate;
+            newDate = oldStringDate;
         }
 
         return newDate;
