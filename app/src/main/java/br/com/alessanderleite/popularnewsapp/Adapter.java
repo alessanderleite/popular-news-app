@@ -49,8 +49,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
         Article model = articles.get(position);
 
         RequestOptions requestOptions = new RequestOptions();
-        requestOptions.placeholder(Utils.getRandomDrawbleColor());
-        requestOptions.error(Utils.getRandomDrawbleColor());
+        requestOptions.placeholder(Utils.getRandomDrawableColor());
+        requestOptions.error(Utils.getRandomDrawableColor());
         requestOptions.diskCacheStrategy(DiskCacheStrategy.ALL);
         requestOptions.centerCrop();
 
